@@ -4,7 +4,6 @@
     "keywords": ["framework", "laravel", "lumen", "dingo", "api"],
     "license": "MIT",
     "type": "project",
-    "minimum-stability": "dev",
     "require": {
         "php": ">=5.5.9",
         "laravel/lumen-framework": "5.2.*",
@@ -12,7 +11,6 @@
         "tymon/jwt-auth": "^0.5.9",
         "illuminate/routing": "^5.2",
         "illuminate/hashing": "^5.2",
-        "illuminate/cookie": "^5.2",
         "dingo/api": "1.0.x@dev"
     },
     "require-dev": {

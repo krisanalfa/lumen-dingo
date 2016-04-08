@@ -38,8 +38,10 @@ return [
 
     'guards' => [
         'api' => [
-            'driver' => 'session',
-            'provider' => 'users'
+            'driver' => 'api',
+            'provider' => 'users',
+            'identifier' => 'email',
+            'password' => 'password',
         ],
     ],
 

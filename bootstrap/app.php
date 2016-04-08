@@ -29,7 +29,6 @@ $app->configure('app');
 $app->configure('api');
 $app->configure('jwt');
 $app->configure('auth');
-$app->configure('session');
 
 class_alias(Tymon\JWTAuth\Facades\JWTAuth::class, 'JWTAuth');
 class_alias(Tymon\JWTAuth\Facades\JWTFactory::class, 'JWTFactory');
@@ -113,8 +112,7 @@ $app->routeMiddleware([
 // $app->register(App\Providers\EventServiceProvider::class);
 
 // JWTAuth Dependencies
-$app->register(Illuminate\Session\SessionServiceProvider::class);
-$app->register(Illuminate\Cookie\CookieServiceProvider::class);
+$app->register(App\Providers\GuardServiceProvider::class);
 $app->register(Tymon\JWTAuth\Providers\JWTAuthServiceProvider::class);
 $app->register(Dingo\Api\Provider\LumenServiceProvider::class);
 
