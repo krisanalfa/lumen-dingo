@@ -68,6 +68,12 @@ return [
             // We should get model name from JWT configuration
             'model'  => app('config')->get('jwt.user'),
         ],
+
+        // Uncoment below to enable database, firstly you need to comment above line
+        // 'users' => [
+        //     'driver' => 'database',
+        //     'table' => 'users',
+        // ],
     ],
 
 ];

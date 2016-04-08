@@ -13,6 +13,12 @@ $api->version(['v1'], function ($api) use ($app) {
     $api->post('/auth/login', 'App\Api\v1\AuthController@postLogin');
 
     $api->get('/user', ['middleware' => 'api.auth', function () {
-        return JWTAuth::parseToken()->authenticate();
+        $user = JWTAuth::parseToken()->authenticate();
+
+        return [
+            'id' => $user->id,
+            'name' => $user->name,
+            'email' => $user->email,
+        ];
     }]);
 });
