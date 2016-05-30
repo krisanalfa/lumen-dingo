@@ -11,6 +11,7 @@ $api->version(['v1'], function ($api) use ($app) {
     });
 
     $api->post('/auth/login', 'App\Api\v1\AuthController@postLogin');
+    $api->get('/auth/invalidate', 'App\Api\v1\AuthController@getInvalidate');
 
     $api->get('/user', ['middleware' => 'api.auth', function () {
         $user = JWTAuth::parseToken()->authenticate();

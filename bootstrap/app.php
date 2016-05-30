@@ -131,7 +131,7 @@ $app->make(Dingo\Api\Auth\Auth::class)->extend('jwt', function ($app) {
 |
 */
 
-$app->group(['namespace' => App\Api\Controllers::class], function ($app) {
+$app->group(['namespace' => App\Api\v1\Controllers::class], function ($app) {
     require __DIR__.'/../app/Api/routes.php';
 });
 

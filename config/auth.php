@@ -40,8 +40,6 @@ return [
         'api' => [
             'driver' => 'api',
             'provider' => 'users',
-            'identifier' => 'email',
-            'password' => 'password',
         ],
     ],
 

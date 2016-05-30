@@ -66,4 +66,18 @@ class AuthController extends Controller
     {
         return $request->only('email', 'password');
     }
+
+    /**
+     * Invalidate a token.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function getInvalidate()
+    {
+        $token = JWTAuth::parseToken();
+
+        $token->invalidate();
+
+        return ['success' => 'token_invalidated'];
+    }
 }
